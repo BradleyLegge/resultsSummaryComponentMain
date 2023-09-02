@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk';
+}
+
+:root{
+    /* Primary */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    --light-red-background: hsl(0, 100%, 95%);
+    --orangey-yellow-background: hsl(39, 100%, 95%);
+    --green-teal-background: hsl(166, 100%, 95%);
+    --cobalt-blue-background: hsl(234, 85%, 95%);
+
+    /* Gradients */
+    --light-slate-blue: hsl(252, 100%, 67%); /* background*/
+    --light-royal-blue: hsl(241, 81%, 54%); /* background*/
+
+    --violet-blue: hsla(256, 72%, 46%, 1); /* circle */
+    --persian-blue: hsla(241, 72%, 46%, 0); /* circle */
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    --light-gray-blue: hsl(224, 30%, 55%);
+
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+    --font-weight-800: 800;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    width: 550px;
+    margin-top: 100px;
+    box-shadow: 10px 10px 10px var(--light-lavender);
+    border-radius: 15px;
+}
+
+/* Results Panel */
+.result-panel{
+    background-image: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    border-radius: 15px;
+    padding: 35px;
+}
+
+.your-result{
+    margin-bottom: 20px; 
+    font-size: 18px;
+    text-align: center;
+    color: var(--light-lavender);
+}
+
+.score{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    color: var(--light-lavender);
+    background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+}
+
+.score span{
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--white)
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+}
+
+.result-info{
+    text-align: center;
+    font-size: 14px;
+    color: var(--light-lavender);
+}
+
+.great{
+    margin: 20px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--white);
+}
+
+/* Summary Panel */
+.summary-panel{
+    padding: 35px;
+}
+
+.summary-name{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.summary{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reaction{
+    padding: 8px;
+    display: flex; 
+    justify-content: space-between;
+    background-color: var(--light-red-background);
+    border-radius: 5px;
+}
+
+.reaction-img{
+    color: var(--light-red);
+    display: flex;
+    gap: 10px;
+}
+
+.reaction-score{
+    color: var(--light-gray-blue);
+}
+
+.reaction-score span{
+    color: black;
+    font-weight: 800;
+}
+
+.memory{
+    padding: 8px;
+    display: flex; 
+    justify-content: space-between;
+    background-color: var(--orangey-yellow-background);
+    border-radius: 5px;
+}
+
+.memory-img{
+    color: var(--orangey-yellow);
+    display: flex;
+    gap: 10px;
+}
+
+.memory-score{
+    color: var(--light-gray-blue);
+}
+
+.memory-score span{
+    color: black;
+    font-weight: 800;
+}
+
+.verbal{
+    padding: 8px;
+    display: flex; 
+    justify-content: space-between;
+    background-color: var(--green-teal-background);
+    border-radius: 5px;
+}
+
+.verbal-img{
+    color: var(--green-teal);
+    display: flex;
+    gap: 10px;
+}
+
+.verbal-score{
+    color: var(--light-gray-blue);
+}
+
+.verbal-score span{
+    color: black;
+    font-weight: 800;
+}
+
+.visual{
+    padding: 8px;
+    display: flex; 
+    justify-content: space-between;
+    background-color: var(--cobalt-blue-background);
+    border-radius: 5px;
+}
+
+.visual-img{
+    color: var(--cobalt-blue);
+    display: flex;
+    gap: 10px;
+}
+
+.visual-score{
+    color: var(--light-gray-blue);
+}
+
+.visual-score span{
+    color: black;
+    font-weight: 800;
+}
+
+/* Button */
+.continue-btn{
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    border-radius: 20px;
+    border: none;
+}
+
+.continue-btn:hover{
+    cursor: pointer;
+    background-image: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+
+/* For screens smaller than 500px */
+@media screen and (max-width: 500px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    body{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
